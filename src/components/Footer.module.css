@@ -1,0 +1,168 @@
+.footer {
+  background-color: #0a192f;
+  color: #ccd6f6;
+  padding: 4rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.5), transparent);
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footerBrand {
+  max-width: 300px;
+}
+
+.footerLogo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #64ffda;
+  margin-bottom: 1rem;
+}
+
+.footerTagline {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.footerLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.linkColumn h4 {
+  color: #e6f1ff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.linkColumn h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #64ffda;
+}
+
+.linkColumn ul {
+  list-style: none;
+}
+
+.linkColumn li {
+  margin-bottom: 0.8rem;
+}
+
+.linkColumn a {
+  color: #8892b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.linkColumn a:hover {
+  color: #64ffda;
+}
+
+.footerDivider {
+  height: 1px;
+  background-color: rgba(136, 146, 176, 0.2);
+  margin: 2rem 0;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #8892b0;
+}
+
+/* Social Links Styles */
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialLinkContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-3px);
+}
+
+.socialIcon {
+  transition: transform 0.3s ease;
+}
+
+.socialLink:hover .socialIcon {
+  filter: brightness(0) invert(1);
+  transform: scale(1.1);
+}
+
+.socialLinkName {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover + .socialLinkName,
+.socialLink:focus + .socialLinkName {
+  color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+  .socialLinks {
+    gap: 15px;
+  }
+  
+  .socialLinkName {
+    display: none;
+  }
+}
+

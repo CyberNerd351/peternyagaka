@@ -1,0 +1,266 @@
+.researchSection {
+  background-color: #0a192f;
+  color: #e6f1ff;
+  padding: 120px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ccd6f6;
+}
+
+.sectionNumber {
+  color: #64ffda;
+  margin-right: 10px;
+  font-family: 'SF Mono', monospace;
+  font-size: 1.8rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: #8892b0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 15px;
+}
+
+.tabButton {
+  background: transparent;
+  border: none;
+  color: #ccd6f6;
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tabButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #64ffda;
+  transition: width 0.3s ease;
+}
+
+.tabButton:hover {
+  color: #64ffda;
+}
+
+.tabButton.active {
+  color: #64ffda;
+}
+
+.tabButton.active::after {
+  width: 100%;
+}
+
+.researchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.researchCard {
+  background-color: #112240;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.cardImage {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.researchCard:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10, 25, 47, 0.1), rgba(10, 25, 47, 0.8));
+}
+
+.statusBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'SF Mono', monospace;
+}
+
+.statusBadge[data-status="ongoing"] {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+}
+
+.statusBadge[data-status="data collection"] {
+  background-color: rgba(255, 165, 0, 0.1);
+  color: #ffa500;
+}
+
+.statusBadge[data-status="completed"] {
+  background-color: rgba(0, 191, 255, 0.1);
+  color: #00bfff;
+}
+
+.cardContent {
+  padding: 25px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.researchTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ccd6f6;
+  margin: 0;
+  flex: 1;
+}
+
+.researchDate {
+  font-size: 0.85rem;
+  color: #64ffda;
+  font-family: 'SF Mono', monospace;
+  margin-left: 15px;
+}
+
+.researchDescription {
+  color: #8892b0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.techTag {
+  font-size: 0.8rem;
+  font-family: 'SF Mono', monospace;
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.1);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.findings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #8892b0;
+  margin-bottom: 20px;
+}
+
+.findings svg {
+  width: 16px;
+  height: 16px;
+  color: #64ffda;
+}
+
+.researchLink {
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.researchLink:hover {
+  color: #ccd6f6;
+}
+
+.researchLink::after {
+  content: '→';
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.researchLink:hover::after {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .researchSection {
+    padding: 80px 0;
+  }
+  
+  .researchGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .cardContent {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .researchSection {
+    padding: 60px 0;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .researchCard {
+    max-width: 100%;
+  }
+}

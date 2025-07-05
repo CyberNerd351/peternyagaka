@@ -1,0 +1,262 @@
+.projectsSection {
+  background-color: #0a192f;
+  color: #e6f1ff;
+  padding: 120px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ccd6f6;
+}
+
+.sectionNumber {
+  color: #64ffda;
+  margin-right: 10px;
+  font-family: 'SF Mono', monospace;
+  font-size: 1.8rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: #8892b0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.filterButton {
+  background: transparent;
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-family: 'SF Mono', monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background: rgba(100, 255, 218, 0.1);
+}
+
+.filterButton.active {
+  background: #64ffda;
+  color: #0a192f;
+  font-weight: 500;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.projectCard {
+  background-color: #112240;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  position: relative;
+}
+
+.projectCard.featured {
+  border: 2px solid #64ffda;
+}
+
+.projectImage {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10, 25, 47, 0.1), rgba(10, 25, 47, 0.8));
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #64ffda;
+  color: #0a192f;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'SF Mono', monospace;
+}
+
+.projectContent {
+  padding: 25px;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ccd6f6;
+  margin: 0;
+}
+
+.projectCategory {
+  font-size: 0.8rem;
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: 'SF Mono', monospace;
+}
+
+.projectDescription {
+  color: #8892b0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-family: 'SF Mono', monospace;
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.1);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #ccd6f6;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background-color: rgba(100, 255, 218, 0.1);
+  border: 1px solid #64ffda;
+  transition: all 0.3s ease;
+}
+
+.link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.addProjectCard {
+  background-color: #112240;
+  border: 2px dashed #64ffda;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addProjectContent {
+  padding: 30px;
+  text-align: center;
+  color: #64ffda;
+}
+
+.addProjectContent svg {
+  margin-bottom: 15px;
+}
+
+.addProjectContent h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.addProjectContent p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #8892b0;
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 80px 0;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .projectContent {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsSection {
+    padding: 60px 0;
+  }
+  
+  .projectLinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .link {
+    justify-content: center;
+  }
+}
