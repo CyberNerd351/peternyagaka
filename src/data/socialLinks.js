@@ -3,7 +3,7 @@ export const socialLinks = {
   handle: "Rich.Com",
   githubUsername: "CyberNerd351",
   github: "https://github.com/CyberNerd351",
-  email: "peter.nyagaka.dev@gmail.com", // Contact email point
+  email: "peternyagaka5@gmail.com", // Contact email point
   location: "Kenya",
   role: "Full-Stack Developer & Computer Scientist",
   availability: "Available for technical roles & software projects",
