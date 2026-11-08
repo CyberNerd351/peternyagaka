@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Sets the theme before first paint so there is no flash of the wrong one. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('pn-theme')
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
+
+    <title>Peter Nyagaka — Computer Scientist &amp; Full-Stack Developer in Kenya</title>
+    <meta
+      name="description"
+      content="Peter Nyagaka is a Computer Science student and full-stack developer in Kenya. He builds offline-first business systems, REST APIs and React applications — including inventory, point-of-sale and election platforms."
+    />
+    <meta
+      name="keywords"
+      content="Peter Nyagaka, Peter Nyagaka Developer, Peter Nyagaka Computer Scientist, Full-Stack Developer Kenya, Software Developer Kenya"
+    />
+    <link rel="canonical" href="https://peternyagaka.vercel.app/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Peter Nyagaka" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Peter Nyagaka" />
+    <meta property="og:locale" content="en_KE" />
+    <meta property="og:url" content="https://peternyagaka.vercel.app/" />
+    <meta property="og:title" content="Peter Nyagaka — Computer Scientist &amp; Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Computer Science student and full-stack developer in Kenya building practical software: offline-first inventory systems, REST APIs and React applications."
+    />
+    <meta property="og:image" content="https://peternyagaka.vercel.app/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Peter Nyagaka — Computer Scientist and Full-Stack Developer" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Peter Nyagaka — Computer Scientist &amp; Full-Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Computer Science student and full-stack developer in Kenya building practical software: offline-first inventory systems, REST APIs and React applications."
+    />
+    <meta name="twitter:image" content="https://peternyagaka.vercel.app/images/og-image.png" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <!-- Fonts are self-hosted through @fontsource, so nothing loads from a CDN. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Peter Nyagaka",
+        "url": "https://peternyagaka.vercel.app/",
+        "email": "mailto:peternyagaka5@gmail.com",
+        "jobTitle": "Computer Scientist and Full-Stack Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "KE",
+          "addressLocality": "Nairobi"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Egerton University"
+        },
+        "sameAs": [
+          "https://github.com/CyberNerd351",
+          "https://www.linkedin.com/in/peter-n-99a0931b5/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

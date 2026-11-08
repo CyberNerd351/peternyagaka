@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Project case studies
+Allow: /projects/
+
+Sitemap: https://peternyagaka.vercel.app/sitemap.xml
